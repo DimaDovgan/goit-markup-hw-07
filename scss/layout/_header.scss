@@ -1,0 +1,113 @@
+.header-navigator__link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $black-text;
+  height: 80px;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $bkncolor-herobtn-focushoverr;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opasity 250ms linearcubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+}
+.active-page {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $bkncolor-herobtn-focushoverr;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+.header-navigator__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header-portfolio {
+  border-bottom-color: #e5e5e5;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.header-container {
+  background-color: #fff;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0px;
+  width: 100%;
+}
+.header-navigator {
+  display: flex;
+  & > .logo {
+    margin-right: 93px;
+    align-items: center;
+  }
+}
+
+.header-contacts__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $gray;
+}
+
+.header-navigator__list {
+  display: flex;
+  align-items: center;
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  margin-left: 305px;
+}
+.header-contacts__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icone-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .mail-item:hover & {
+    fill: $bkncolor-herobtn-focushoverr;
+  }
+}
+.icone-phone {
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .phone-item:hover & {
+    fill: $bkncolor-herobtn-focushoverr;
+  }
+}
